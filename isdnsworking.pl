@@ -17,24 +17,24 @@ chomp($domain);
 print "Checking $domain across all 🇬🇷   [Greek] ISP's\n";
 
 # foreign
-my $cfprimary = `dig +short $domain 1.1.1.1`;
-my $googleprimary = `dig +short $domain 8.8.8.8`;
+my $cfprimary = `dig +short $domain \@1.1.1.1`;
+my $googleprimary = `dig +short $domain \@8.8.8.8`;
 #otenet
-my $otenetprimary = `dig +short $domain 195.170.0.1`;
-my $otenetsecondary = `dig +short $domain 212.205.212.205`;
-my $otenetmobile1 = `dig +short $domain 94.143.182.1`;
-my $otenetmobile2 = `dig +short $domain 94.143.182.2`;
+my $otenetprimary = `dig +short $domain \@195.170.0.1`;
+my $otenetsecondary = `dig +short $domain \@212.205.212.205`;
+my $otenetmobile1 = `dig +short $domain \@94.143.182.1`;
+my $otenetmobile2 = `dig +short $domain \@94.143.182.2`;
 #wind
-my $windprimary = `dig +short $domain 62.169.194.47`;
-my $windsecondary = `dig +short $domain 62.169.194.48`;
-my $tertiarywindmobile1 = `dig +short $domain 62.169.194.49`;
+my $windprimary = `dig +short $domain \@62.169.194.47`;
+my $windsecondary = `dig +short $domain \@62.169.194.48`;
+my $tertiarywindmobile1 = `dig +short $domain \@62.169.194.49`;
 #forthnet
-my $forthnetprimary = `dig +short $domain 193.92.150.1`;
-my $forthsecondary = `dig +short $domain 193.92.3.10`;
+my $forthnetprimary = `dig +short $domain \@193.92.150.1`;
+my $forthsecondary = `dig +short $domain \@193.92.3.10`;
 #vodafone
-my $vodafoneprimary = `dig +short $domain 213.249.17.10`;
-my $vodafonesecondary = `dig +short $domain 213.249.17.11`;
-my $tertiaryvodafone = `dig +short $domain 213.249.39.29`;
+my $vodafoneprimary = `dig +short $domain \@213.249.17.10`;
+my $vodafonesecondary = `dig +short $domain \@213.249.17.11`;
+my $tertiaryvodafone = `dig +short $domain \@213.249.39.29`;
 print "\n";
 print "Cloudflare DNS reports: $cfprimary";
 print "Google DNS reports: $googleprimary\n";
